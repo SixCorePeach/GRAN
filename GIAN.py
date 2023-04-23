@@ -361,10 +361,10 @@ class ConvBlock(nn.Module):
         return out
 
 
-class GCNUCE_Res(nn.Module):
+class GIAN(nn.Module):
     # double the GCN to check the change of performance
     def __init__(self, args):
-        super(GCNUCE_Res, self).__init__()
+        super(GIAN, self).__init__()
         # 256 * 320 -> 64 * 80 -> 16 * 20
         self.bcConv1 = DoubleConvBlock(3, 16)
         self.bcConv2 = DoubleConvBlock(16, 32)
